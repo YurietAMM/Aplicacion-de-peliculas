@@ -1,0 +1,14 @@
+<ng-container *ngIf="listado && listado.length > 0">
+  <ng-content select="[contenido]"></ng-content>
+</ng-container>
+
+<div class="cargar" *ngIf="listado?.length === 0">
+  <span #vacio><ng-container select="[vacio]"></ng-container></span>
+  <span *ngIf="!vacio.innerHTML.trim()">
+    <p>No hay peliculas para mostrar</p>
+  </span>
+</div>
+
+<div *ngIf="!listado">
+  <img src="https://media.tenor.com/On7kvXhzml4AAAAj/loading-gif.gif" />
+</div>

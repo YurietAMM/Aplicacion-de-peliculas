@@ -1,0 +1,7 @@
+<mat-icon *ngFor="let star of ratingArr; let posicion = index"
+(mouseenter)="manejarME(posicion)"
+(mouseleave)="manejarML()"
+(click)="rate(posicion)"
+[ngClass]="{checked: ratingSeleccionado > posicion}">
+  star
+</mat-icon>

@@ -1,0 +1,7 @@
+.peliculas-contenedor {
+  width: 20em;
+  height: auto;
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 1rem;
+}
