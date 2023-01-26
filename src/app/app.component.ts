@@ -14,13 +14,15 @@ export class AppComponent {
       this.peliculasEnCines = [{
         titulo: 'Black Adam',
         fechaLanzamiento: 'Octubre 5 de 2022',
-        precio: 9700
+        precio: 9700,
+        poster: ''
       },{
         titulo: 'Avatar: El camino del agua',
         fechaLanzamiento: 'Diciembre 15 de 2022',
-        precio: 9900
+        precio: 9900,
+        poster: ''
       }]
-    }, 3000);
+    }, 500);
   }
 
   peliculasEnCines: pelicula[] = [
