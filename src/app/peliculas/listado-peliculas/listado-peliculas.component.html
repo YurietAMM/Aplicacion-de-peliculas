@@ -1,12 +1,5 @@
-<app-listado-generico [listado]="peliculas">
-  <ng-container contenido>
-    <div class="peliculas-contenedor">
-      <div *ngFor="let pelicula of peliculas; let index = index" class="peliculas-contenedor">
-        <a>
-          <img [src]="pelicula.poster" alt="poster">
-        </a>
-        <p><a>{{pelicula.titulo}}</a></p>
-      </div>
-    </div>
-  </ng-container>
-</app-listado-generico>
+<h2>En cines</h2>
+<app-landing-page [peliculas]="peliculasEnCines"></app-landing-page>
+<br>
+<h2>Proximamente</h2>
+<app-landing-page [peliculas]="peliculasProximas"></app-landing-page>

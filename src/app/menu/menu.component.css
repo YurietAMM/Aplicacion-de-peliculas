@@ -5,3 +5,8 @@ mat-toolbar {
   z-index: 1000;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
