@@ -9,12 +9,16 @@ import { IndiceCineComponent } from './cines/indice-cine/indice-cine.component';
 import { CrearCineComponent } from './cines/crear-cine/crear-cine.component';
 import { CrearPeliculaComponent } from './peliculas/crear-pelicula/crear-pelicula.component';
 import { EditarActorComponent } from './actores/editar-actor/editar-actor.component';
+import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
+import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
+import { EditarPeliculaComponent } from './peliculas/editar-pelicula/editar-pelicula.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ListadoPeliculasComponent
   },
+  // Generos
   {
     path: 'generos',
     component: IndiceGenerosComponent
@@ -23,6 +27,11 @@ const routes: Routes = [
     path: 'generos/crear',
     component: CrearGeneroComponent
   },
+  {
+    path: 'generos/editar/:id',
+    component: EditarGeneroComponent
+  },
+  // Actores
   {
     path: 'actores',
     component: IndiceActoresComponent
@@ -35,6 +44,7 @@ const routes: Routes = [
     path: 'actores/editar/:id',
     component: EditarActorComponent
   },
+  // Cines
   {
     path: 'cines',
     component: IndiceCineComponent
@@ -44,8 +54,22 @@ const routes: Routes = [
     component: CrearCineComponent
   },
   {
+    path: 'cines/editar/:id',
+    component: EditarCineComponent
+  },
+  // Peliculas
+  {
     path: 'peliculas/crear',
     component: CrearPeliculaComponent
+  },
+  {
+    path: 'peliculas/editar/:id',
+    component: EditarPeliculaComponent
+  },
+  // WildCard
+  {
+    path: '**',
+    redirectTo: ''
   }
 ];
 

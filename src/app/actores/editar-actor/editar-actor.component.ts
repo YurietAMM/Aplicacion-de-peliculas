@@ -12,7 +12,7 @@ export class EditarActorComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      console.log(params.id);
+      //console.log(params.id);
     })
   }
 
