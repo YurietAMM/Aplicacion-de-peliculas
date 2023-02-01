@@ -1,0 +1,21 @@
+<form (submit)="guardarFormulario()" [formGroup]="formulario">
+  <!--Con bordes por todos lados-->
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input formControlName="nombre" matInput/>
+    <mat-error *ngIf="formulario.invalid">{{obtenerErrorCampoNombre()}}</mat-error>
+  </mat-form-field>
+  <!--Con borde inferior-->
+  <!-- <mat-form-field> -->
+    <!-- <mat-label>Nombre*</mat-label> -->
+    <!-- <input formControlName="nombre" matInput/> -->
+  <!-- </mat-form-field> -->
+  <div id="divButtons">
+    <button mat-flat-button color="primary" type="button" [disabled]="formulario.invalid">
+        <mat-icon>save</mat-icon> Guardar
+    </button>
+    <a mat-stroked-button color="warn" routerLink="/generos">
+      <mat-icon>cancel</mat-icon> Cancelar
+    </a>
+  </div>
+</form>
