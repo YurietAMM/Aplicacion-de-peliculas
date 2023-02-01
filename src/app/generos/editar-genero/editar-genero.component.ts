@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { generoPeliculas } from 'src/app/interface/genero.interface';
 
 @Component({
   selector: 'app-editar-genero',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditarGeneroComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  guardar(Genero: generoPeliculas) {
+    console.log(Genero);
+    this.router.navigate(['/generos']);
   }
 
 }

@@ -11,7 +11,7 @@ import { generoPeliculas } from '../../interface/genero.interface';
 })
 export class FormularioGeneroComponent implements OnInit {
 
-  @Output() onSubmit : EventEmitter<generoPeliculas> = new EventEmitter<generoPeliculas>();
+  @Output() onSubmit = new EventEmitter<generoPeliculas>();
 
   constructor(private router : Router, private formBuilder: FormBuilder) { }
 

@@ -11,7 +11,7 @@
     <!-- <input formControlName="nombre" matInput/> -->
   <!-- </mat-form-field> -->
   <div id="divButtons">
-    <button mat-flat-button color="primary" type="button" [disabled]="formulario.invalid">
+    <button mat-flat-button color="primary" type="button" [disabled]="formulario.invalid" (click)="guardarFormulario()">
         <mat-icon>save</mat-icon> Guardar
     </button>
     <a mat-stroked-button color="warn" routerLink="/generos">
