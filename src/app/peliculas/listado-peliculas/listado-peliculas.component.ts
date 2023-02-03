@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { pelicula } from '../../interface/pelicula.interface';
 
 @Component({
@@ -11,17 +11,26 @@ export class ListadoPeliculasComponent{
   constructor() {}
 
   ngOnInit(): void {
-    this.peliculasEnCines = [{
-      titulo: 'Gato con botas: el último deseo',
-      fechaLanzamiento: 'Diciembre 8 de 2022',
-      precio: 9700,
-      poster: 'https://archivos-cms.cinecolombia.com/images/_aliases/exhibition_poster/8/3/2/8/28238-17-esl-CO/f5bb2406d172-pib_cineco_2-poster_480x670.jpg'
-    },{
-      titulo: 'Avatar: El camino del agua',
-      fechaLanzamiento: 'Diciembre 15 de 2022',
-      precio: 9900,
-      poster: 'https://revistahush.com/wp-content/uploads/2022/11/Poster-y-Trailer-de-Avatar-The-Way-of-Life-2-819x1024.webp'
-    }]
+    this.peliculasEnCines = [
+      {
+        titulo: 'Ant-Man y la Avispa: Quantumania',
+        fechaLanzamiento: 'Febrero 16 de 2023',
+        generoId: [2,1],
+        precio: 9700,
+        poster: 'https://terrigen-cdn-dev.marvel.com/content/prod/1x/antmanquantumania_payoff_1-sht_v5a_lg.jpg',
+        proximosEstrenos: true,
+        enCines: false
+      },
+      {
+        titulo: 'Llaman a la puerta',
+        fechaLanzamiento: 'Febrero 3 de 2023',
+        generoId: [3,1],
+        precio: 9900,
+        poster: 'https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/980px/public/media/image/2023/02/llaman-puerta-2943202.jpg?itok=nxZM7eTq',
+        proximosEstrenos: true,
+        enCines: false
+      }
+  ]
   }
   peliculasEnCines: pelicula[] = [];
   peliculasProximas: pelicula[] = [];
