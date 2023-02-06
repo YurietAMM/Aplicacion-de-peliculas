@@ -1,6 +1,6 @@
 export interface ValoresBusqueda {
   titulo: string,
-  generoId: number[],
+  generoId: number,
   proximosEstrenos: boolean,
   enCines: boolean
 }

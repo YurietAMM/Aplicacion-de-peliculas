@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { actor } from '../../interface/actor.interface';
 
 @Component({
   selector: 'app-crear-actor',
@@ -10,6 +11,10 @@ export class CrearActorComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  guardar(actor : actor){
+    console.log(actor);
   }
 
 }
