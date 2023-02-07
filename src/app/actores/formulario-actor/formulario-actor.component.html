@@ -10,7 +10,9 @@
     <mat-datepicker-toggle  matSuffix  [for]="dp" ></mat-datepicker-toggle>
     <mat-datepicker #dp></mat-datepicker>
   </mat-form-field>
-  <div>
+  <app-input-img [UrlImagen]="modelo?.foto"  (img)="imagen($event)"></app-input-img>
+  <app-input-markdown></app-input-markdown>
+  <div id="divContenedorBotones">
     <button mat-flat-button color="primary" [disabled]="formulario.invalid" (click)="onSubmit()">
       <mat-icon>save</mat-icon> Guardar
     </button>

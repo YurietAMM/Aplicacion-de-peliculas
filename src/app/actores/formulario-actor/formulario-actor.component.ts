@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { actor } from '../../interface/actor.interface';
+import { actor, leerActor } from '../../interface/actor.interface';
 
 @Component({
   selector: 'app-formulario-actor',
@@ -15,17 +15,23 @@ export class FormularioActorComponent implements OnInit {
 
   @Output() submit: EventEmitter<actor> = new EventEmitter<actor>();
 
-  @Input() modelo!: actor;
+  @Input() modelo!: leerActor;
 
   ngOnInit(): void {
     this.formulario = this.formBuilder.group({
-      nombre: ['', {Validators: [Validators.required]}],
-      fechaNacido: ''
+      nombre: ['', [Validators.required]],
+      fechaNacido: '',
+      foto: [null, [Validators.required]]
     });
 
-    if(this.modelo !== undefined){
+    if(this.modelo !== undefined && this.modelo !== null){
       this.formulario.patchValue(this.modelo);
     }
+  }
+
+
+  imagen(file: File){
+    this.formulario.get('foto')?.setValue(file);
   }
 
   onSubmit(){

@@ -6,6 +6,18 @@ form {
   row-gap: 10px;
 }
 
+#divContenedorBotones {
+  margin: 1rem 0 0 0;
+}
+
+app-input-img {
+  margin-bottom:350px;
+}
+
+app-input-markdown {
+  margin-top: 200px;
+}
+
 button {
   margin-left: 10px;
 }

@@ -1,1 +1,12 @@
-<p>input-img works!</p>
+<div id="divControlImagenes">
+  <button type="button" mat-raised-button (click)="fileInput.click()">Seleccionar Imagen</button>
+  <input type="file" hidden #fileInput (change)="change($event)" />
+</div>
+<div id="divContenedorImagen">
+  <div class="divImagen" *ngIf="imagenBase64">
+    <img class="imagenMostrada" [src]="imagenBase64" />
+  </div>
+  <div class="divImagen" *ngIf="UrlImagen">
+    <img class="imagenMostrada" [src]="UrlImagen" />
+  </div>
+</div>

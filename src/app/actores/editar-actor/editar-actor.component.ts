@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { actor } from '../../interface/actor.interface';
+import { actor, leerActor } from '../../interface/actor.interface';
 
 @Component({
   selector: 'app-editar-actor',
@@ -11,9 +11,10 @@ export class EditarActorComponent implements OnInit {
 
   constructor(private activatedRoute : ActivatedRoute) { }
 
-  modelo: actor = {
-    nombre: 'Pedrin',
-    fechaNacido: new Date()
+  modelo: leerActor = {
+    nombre: 'Dwayne Johnson',
+    fechaNacido: new Date(),
+    foto: 'Dwayne Johnson.jpg'
   };
 
   ngOnInit(): void {
